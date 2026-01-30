@@ -1,1 +1,13 @@
 
+{
+  "name": "edgetunnel-obfuscated",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker with auto-obfuscation",
+  "main": "_worker.js",
+  "scripts": {
+    "build": "npx javascript-obfuscator _worker.js --output _worker.js --string-array true --string-array-encoding 'base64' --identifier-names-generator 'hexadecimal'"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.1"
+  }
+}
